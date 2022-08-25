@@ -6,12 +6,18 @@ import glob
 import os
 from matplotlib.ticker import StrMethodFormatter
 
+#author: barry giesbrecht
+#initial version date: aug 2, 2022
 #for each lit search, get the files, read them in and concatenate into one big data frame
+#search dir: directory with all the WoS searches. current version of the script assumes WoS searches are stored in a particular directory.
+search_dir = "wos-searches"
+
 #list_search_files = '*OSC*.txt'
 #fig_title = '2000-2021 Oscillation Publications'
 list_search_files = ["ERP","OSC","PC","MOBILE"]
 fig_title = '2000-2021 EEG + Topic Publications'
 
+#if you want to pass the file list and figure title as arguments comment lines 12-13 and uncomment these ones
 #list_search_files = str(sys.argv[1])
 #fig_title = str(sys.argv[2])
 
@@ -20,7 +26,7 @@ all_yearly_pubs = {}
 #loop through each search
 search_ctr = 0
 for search in list_search_files:
-    this_search_str = "*" + list_search_files[search_ctr] + "*.txt"
+    this_search_str = search_dir + "/*" + list_search_files[search_ctr] + "*.txt"
 
     these_files = glob.glob(this_search_str)
 

@@ -59,7 +59,7 @@ if __name__ == '__main__':
     search_filters = ' AND rtype.exact("Journal Article") AND PEER(yes)'
 
     # search for papers from 01/01/2000 to 12/31/2021
-    search_years = range(2012, 2022)
+    search_years = range(2000, 2022)
 
     for i, topic in enumerate(topics):
 

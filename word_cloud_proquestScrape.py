@@ -24,9 +24,9 @@ if __name__ == '__main__':
     if args.chrome:
 
         options = webdriver.ChromeOptions()
-        options.add_argument("user-data-dir=C:\\Users\\Jordan\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 2")
+        options.add_argument("user-data-dir= ")
 
-        browser = webdriver.Chrome(executable_path='C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe',
+        browser = webdriver.Chrome(executable_path='PATH TO CHROME DRIVER',
                                    chrome_options=options)
 
     else:
@@ -43,8 +43,8 @@ if __name__ == '__main__':
 
     browser.implicitly_wait(5)
 
-    username = 'jordangarrett'
-    password = 'Neurobball23'
+    username = ''
+    password = ''
     ucsb_login(browser, username, password)
 
     # search for papers from 01/01/2000 to 12/31/2021

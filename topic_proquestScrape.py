@@ -44,8 +44,8 @@ if __name__ == '__main__':
 
     browser.implicitly_wait(5)
 
-    username = 'jordangarrett'
-    password = 'Neurobball23'
+    username = ''
+    password = ''
     ucsb_login(browser, username, password)
 
     topics = ['Mobile', 'Decoding', 'TF', 'ERP']

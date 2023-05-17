@@ -8,6 +8,16 @@ import pandas as pd
 
 
 def ucsb_login(browser, username: str, password: str):
+
+    # get around cookies
+    try:
+        manage_cookies_button = browser.find_element(by=By.XPATH, value='//*[@id="onetrust-pc-btn-handler"]')
+        manage_cookies_button.click()
+        confirm_choice_button = browser.find_element(by=By.XPATH, value='//*[@id="onetrust-pc-sdk"]/div/div[3]/div[1]/button')
+        confirm_choice_button.click()
+    except:
+        pass
+
     try:
         # recent institution not saved
         find_institution = browser.find_element(by=By.XPATH, value='//*[@id="institutionName"]')
